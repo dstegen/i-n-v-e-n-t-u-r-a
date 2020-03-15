@@ -15,12 +15,12 @@
  let wsport = 8080;
  let host = 'localhost';
  if (getIPs()['en0']) {
- 	host = getIPs()['en0'];
+   host = getIPs()['en0'];
  } else if (getIPs()['wlo1']) {
- 	host = getIPs()['wlo1'];
+   host = getIPs()['wlo1'];
  } else if (getIPs()['eth0']) {
- 	host = getIPs()['eth0'];
- 	wsport = 80;
+   host = getIPs()['eth0'];
+   wsport = 80;
  }
  console.log('Available network devices: ');
  console.log(getIPs());
@@ -30,8 +30,8 @@
  }).listen(port, host, () => console.log('i-n-v-e-n-t-u-r-a is online: http://'+host+':'+port+' (wsport:'+wsport+')'));
 
  const wss = new WebSocket.Server({
- 	server,
- 	clientTracking: true
+   server,
+   clientTracking: true
  });
 
 

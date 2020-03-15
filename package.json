@@ -1,0 +1,24 @@
+{
+  "name": "i-n-v-e-n-t-u-r-a",
+  "version": "0.3.1",
+  "description": "stock administration",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "backup": "backup",
+    "public": "public"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "daniel stegen",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "csvjson": "^5.1.0",
+    "jquery": "^3.4.1",
+    "mimetype": "0.0.8",
+    "ws": "^7.2.3"
+  }
+}

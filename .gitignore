@@ -1,0 +1,15 @@
+# macOS files
+.DS_Store
+.eslintrc.json
+
+# archives
+*.zip
+*.tgz
+
+# external modules
+node_modules
+
+# other files & directories files
+backup/*
+*.csv
+*.ods

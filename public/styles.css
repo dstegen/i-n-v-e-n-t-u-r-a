@@ -1,0 +1,27 @@
+/*!
+ * public/styles.css
+ * inventura
+ * Copyright 2020 Daniel Stegen <info@danielstegen.de>
+ * Licensed under MIT
+ */
+
+ td, th {
+  padding: 5px 10px;
+  border: 1px solid #666;
+ }
+
+th {
+  cursor: pointer;
+}
+
+#filterButtons {
+  flex-wrap: wrap;
+}
+
+.bg-out {
+  background-color: #cccccc;
+}
+
+.text-out {
+  color: #aaaaaa;
+}

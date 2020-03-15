@@ -15,10 +15,12 @@ function editItem (id) {
   editObj.item = $('.id'+id+'.item')[0].innerText;
   editObj.amount = $('.id'+id+'.amount')[0].innerText;
   editObj.valid = $('.id'+id+'.valid_until')[0].innerText;
+  editObj.tags = $('.id'+id+'.tags')[0].innerText;
   $('#id').val(editObj.id);
   $('.modal-title')[0].innerText = editObj.item;
   $('#amount').val(editObj.amount);
   $('#valid_until').val(editObj.valid);
+  $('#tags').val(editObj.tags);
   $('#editModal').modal('toggle');
 }
 

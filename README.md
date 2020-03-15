@@ -1,5 +1,5 @@
 # i-n-v-e-n-t-u-r-a #
-#### simple home stock inventary server-program in nodejs ####
+#### simple home stock inventory server in nodejs ####
 
 ## License Code ##
 

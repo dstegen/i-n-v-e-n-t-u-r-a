@@ -20,5 +20,15 @@
     "jquery": "^3.4.1",
     "mimetype": "0.0.8",
     "ws": "^7.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dstegen/i-n-v-e-n-t-u-r-a.git"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.csv",
+      "*.json"
+    ]
   }
 }

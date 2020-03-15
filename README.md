@@ -1,9 +1,9 @@
 # i-n-v-e-n-t-u-r-a #
-#### simple home stock inventory server in nodejs ####
+#### simple home stock inventory server-app in nodejs ####
 
 ## Installation ##
 
-- Download the repositories
+- download the repositories
 - do a npm install to install the dependencies
 - create a csv file named "inventura_catalog.csv" in the root directory of the app
 - values in the csv should be separated with a simicolon (;), text should be in double quotes (")
@@ -32,6 +32,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Authors: Daniel Stegen
+Author: Daniel Stegen
 
 Email: info@danielstegen.de

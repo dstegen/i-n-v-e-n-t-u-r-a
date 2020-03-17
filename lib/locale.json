@@ -1,0 +1,38 @@
+{
+  "searchterm": {
+    "en": "Search",
+    "de": "Suchbegriff"
+  },
+  "additem": {
+    "en": "Add item",
+    "de": "Vorrat hinzufügen"
+  },
+  "add": {
+    "en": "Add",
+    "de": "Hinzufügen"
+  },
+  "cancle": {
+    "en": "Cancle",
+    "de": "Abbrechen"
+  },
+  "savechanges": {
+    "en": "Save changes",
+    "de": "Änderung speichern"
+  },
+  "ok2weeks": {
+    "en": "lasting for 2 weeks",
+    "de": "noch 2 Wochen"
+  },
+  "ok1week": {
+    "en": "lasting only for 1 week",
+    "de": "nur noch 1 Wochen"
+  },
+  "expired": {
+    "en": "expired",
+    "de": "abgelaufen"
+  },
+  "notinstock": {
+    "en": "not in stock",
+    "de": "aus"
+  }
+}

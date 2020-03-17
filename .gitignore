@@ -11,5 +11,6 @@ node_modules
 
 # other files & directories files
 backup/*
-*.csv
-*.ods
+/*.csv
+/*.ods
+/*.bak

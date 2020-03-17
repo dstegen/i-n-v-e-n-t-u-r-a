@@ -6,9 +6,11 @@
   "directories": {
     "lib": "lib",
     "backup": "backup",
+    "example": "example",
     "public": "public"
   },
   "scripts": {
+    "postinstall": "node example/install.js",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

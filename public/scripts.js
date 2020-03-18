@@ -28,18 +28,23 @@ function editItem (id) {
 // filters
 
 function hideOthers (cat) {
-  categories.forEach( item => {
-    $('.'+item).hide();
-  });
-  $('.'+cat).show();
+  if (cat !== '' && cat !== undefined) {
+    Cookies.set('lastFilter', cat);
+    categories.forEach( item => {
+      $('.'+item).hide();
+    });
+    $('.'+cat).show();
+  }
 }
 
 function showAll () {
+  Cookies.remove('lastFilter');
   categories.forEach( item => {
     $('.'+item).show();
   });
 }
 
+hideOthers(Cookies.get('lastFilter'));
 
 // full text search in items
 

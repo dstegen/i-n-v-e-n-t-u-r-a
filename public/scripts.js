@@ -35,6 +35,7 @@ function hideOthers (cat) {
     });
     $('.'+cat).show();
   }
+  $('#tableFooter').width($('TBODY').width());
 }
 
 function showAll () {
@@ -42,6 +43,7 @@ function showAll () {
   categories.forEach( item => {
     $('.'+item).show();
   });
+  $('#tableFooter').width($('TBODY').width());
 }
 
 hideOthers(Cookies.get('lastFilter'));
@@ -108,3 +110,7 @@ function sortTable(column) {
     }
   }
 }
+
+// Resize Table Footer
+
+$('#tableFooter').width($('TBODY').width());

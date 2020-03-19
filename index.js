@@ -20,6 +20,7 @@
    host = getIPs()['wlo1'];
  } else if (getIPs()['eth0']) {
    host = getIPs()['eth0'];
+   port = 80;
    wsport = 80;
  }
  console.log('Available network devices: ');

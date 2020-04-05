@@ -24,6 +24,32 @@ function editItem (id) {
   $('#editModal').modal('toggle');
 }
 
+function reduceItem (id) {
+  let newAmount = parseInt($('td.entries.id'+id+'.amount').text()) - 1;
+  $('td.entries.id'+id+'.amount').text(newAmount);
+  ajaxUpdater({'id': id, 'amount': newAmount, 'valid_until': $('.id'+id+'.valid_until')[0].innerText, 'tags': $('.id'+id+'.tags')[0].innerText});
+}
+
+function increaseItem (id) {
+  let newAmount = parseInt($('td.entries.id'+id+'.amount').text()) + 1;
+  $('td.entries.id'+id+'.amount').text(newAmount);
+  ajaxUpdater({'id': id, 'amount': newAmount, 'valid_until': $('.id'+id+'.valid_until')[0].innerText, 'tags': $('.id'+id+'.tags')[0].innerText});
+}
+
+function ajaxUpdater (dataIn) {
+  $.ajax({
+    url: '/update', // url where to submit the request
+    type : 'GET', // type of action POST || GET
+    dataType : 'json', // data type
+    data : dataIn, // post data || get data
+    success : function(result) {
+        // you can see the result from the console
+        // tab of the developer tools
+        console.log(result);
+        location.reload();
+    }
+  });
+}
 
 // filters
 

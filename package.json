@@ -1,7 +1,7 @@
 {
   "name": "i-n-v-e-n-t-u-r-a",
-  "version": "0.3.1",
-  "description": "stock administration",
+  "version": "0.3.2",
+  "description": "household stock administration",
   "main": "index.js",
   "directories": {
     "lib": "lib",

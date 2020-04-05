@@ -16,11 +16,18 @@ function editItem (id) {
   editObj.amount = $('.id'+id+'.amount')[0].innerText;
   editObj.valid = $('.id'+id+'.valid_until')[0].innerText;
   editObj.tags = $('.id'+id+'.tags')[0].innerText;
+  let tagsArray = [];
+  editObj.tags.split(',').forEach( item => {
+    if (item != '') {
+      tagsArray.push({ id: item, name: item });
+    }
+  });
   $('#id').val(editObj.id);
   $('.modal-title')[0].innerText = editObj.item;
   $('#amount').val(editObj.amount);
   $('#valid_until').val(editObj.valid);
   $('#tags').val(editObj.tags);
+  tf.setItems(tagsArray);
   $('#editModal').modal('toggle');
 }
 
@@ -136,6 +143,24 @@ function sortTable(column) {
     }
   }
 }
+
+// tokenfield
+
+const tf = new Tokenfield({
+  el: document.querySelector('#tags'), // Attach Tokenfield to the input element with class "text-input"
+  items: myTags,
+  delimiters: [','],
+  itemName: "tags",
+  newItemName: "tags"
+});
+
+const tf2 = new Tokenfield({
+  el: document.querySelector('#add_tags'), // Attach Tokenfield to the input element with class "text-input"
+  items: myTags,
+  delimiters: [','],
+  itemName: "tags",
+  newItemName: "tags"
+});
 
 // Resize Table Footer
 

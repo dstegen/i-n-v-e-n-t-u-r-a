@@ -1,6 +1,6 @@
 {
   "name": "i-n-v-e-n-t-u-r-a",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "household stock administration",
   "main": "index.js",
   "directories": {
@@ -21,6 +21,7 @@
     "csvjson": "^5.1.0",
     "jquery": "^3.4.1",
     "mimetype": "0.0.8",
+    "tokenfield": "^1.2.2",
     "ws": "^7.2.3"
   },
   "repository": {

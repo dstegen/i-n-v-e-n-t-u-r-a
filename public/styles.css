@@ -26,3 +26,17 @@ th {
 .text-out {
   color: #aaaaaa;
 }
+
+.tokenfield.tokenfield-mode-tokens {
+  width: 250px;
+  max-height: 36px;
+  /*overflow: hidden;*/
+}
+
+input, select {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}

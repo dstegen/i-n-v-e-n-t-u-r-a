@@ -23,6 +23,7 @@ function editItem (id) {
     }
   });
   $('#id').val(editObj.id);
+  $('#del_id').val(editObj.id);
   $('.modal-title')[0].innerText = editObj.item;
   $('#amount').val(editObj.amount);
   $('#valid_until').val(editObj.valid);

@@ -62,5 +62,9 @@
   "edit": {
     "en": "edit",
     "de": "ändern"
+  },
+  "deleteItem": {
+    "en": "delete",
+    "de": "löschen"
   }
 }

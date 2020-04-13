@@ -3,7 +3,7 @@
 
 ## Installation ##
 
-- download the repositories
+- download the repository
 - do a npm install to install the dependencies
 - create a csv file named "inventura_catalog.csv" in the root directory of the app
 - values in the csv should be separated with a simicolon (;), text should be in double quotes (")

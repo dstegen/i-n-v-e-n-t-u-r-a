@@ -5,22 +5,18 @@
  * Licensed under MIT (https://github.com/dstegen/i-n-v-e-n-t-u-r-a/blob/master/LICENSE)
  */
 
+'use strict';
+
+// Required Modules
 const fs = require('fs');
+const {SendObj} = require('webapputils-ds');
 const locale = require('./locale.json');
 
-function view (obj, wsport, lang) {
-  if (lang !== 'de') {
-    lang = 'en';
-  }
+
+function view (obj, wsport, lang='en') {
   let categories = Array.from(new Set(obj.filter( item => item.category !== '').map( item => { return item.category})));
   let tags = Array.from(new Set(obj.filter( item => item.tags !== '').map( item => { return item.tags}).toString().split(',')));
-  let sendObj = {
-    statusCode: 200,
-    contentType: 'text/html; charset=UTF-8',
-    cookie: [],
-    location: '/',
-    data: ''
-  };
+  let sendObj = new SendObj();
   sendObj.data = `
     <!DOCTYPE HTML>
     <html lang="en">

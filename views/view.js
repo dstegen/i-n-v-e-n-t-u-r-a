@@ -77,7 +77,7 @@ function view (obj, wsport, lang='en') {
                 </button>
               </div>
               <div class="modal-body">
-                <form id="editForm" action="/update" method="get" class="form-inline d-flex justify-content-between">
+                <form id="editForm" action="/update" method="post" class="form-inline d-flex justify-content-between">
                   <div class="d-flex justify-content-start row align-items-center">
                     <input type="text" readonly class="d-none" id="id" name="id" value="" />
                     <lable for="amount">${locale.amount[lang]}: </lable>
@@ -91,7 +91,7 @@ function view (obj, wsport, lang='en') {
                 </form>
               </div>
               <div class="modal-footer d-flex justify-content-between">
-                <form id="deleteForm" action="/deleteitem" method="get">
+                <form id="deleteForm" action="/deleteitem" method="post">
                   <input type="text" readonly class="d-none" id="del_id" name="del_id" value="" />
                   <input type="submit" class="btn btn-danger" value="${locale.deleteItem[lang]}" />
                 </form>
@@ -112,7 +112,7 @@ function view (obj, wsport, lang='en') {
                 </button>
               </div>
               <div class="modal-body">
-                <form id="addItem" action="/additem" method="get">
+                <form id="addItem" action="/additem" method="post">
                   <div class="form-group row">
                     <lable class="col-2" for="item">${locale.item[lang]}: </lable>
                     <div class="col-10 pl-0">

@@ -47,7 +47,7 @@ function increaseItem (id) {
 function ajaxUpdater (dataIn) {
   $.ajax({
     url: '/update', // url where to submit the request
-    type : 'GET', // type of action POST || GET
+    type : 'POST', // type of action POST || GET
     dataType : 'json', // data type
     data : dataIn, // post data || get data
     success : function(result) {

@@ -38,7 +38,7 @@ function view (obj, wsport, lang='en') {
             ${tags.map(makeFilterButtons).join('')}
           </div>
           <form id="searchItem" class="mb-3">
-            <input type="text" id="searchterm" name="searchterm" placeholder="${locale.searchterm[lang]}"/> &nbsp;
+            <input type="text" id="searchterm" name="searchterm" placeholder="${locale.searchterm[lang]}" value="" /> &nbsp;
             <span class="text-success">&#9632; ${locale.ok2weeks[lang]}</span> &nbsp;
             <span class="text-warning">&#9632; ${locale.ok1week[lang]}</span> &nbsp;
             <span class="text-danger">&#9632; ${locale.expired[lang]}</span> &nbsp;
@@ -156,14 +156,12 @@ function view (obj, wsport, lang='en') {
         <script src="/public/scripts.js"></script>
         <script>
           // Websockets
-          /*
           const hostname = window.location.hostname ;
           const socket = new WebSocket('ws://'+hostname+':${wsport}/');
           socket.onmessage = function (msg) {
             location.reload();
             console.log(msg.data);
           };
-          */
         </script>
       </body>
     </html>

@@ -5,8 +5,21 @@
 
 - download the repository
 - do a npm install to install the dependencies
-- create a csv file named "inventura_catalog.csv" in the root directory of the app
+- start *using the example* and start the app with npm start
+- or create a csv file named "inventura_catalog.csv" in the root directory of the app
 - values in the csv should be separated with a simicolon (;), text should be in double quotes (")
+
+## Changelog ##
+
+#### v0.3.6 ####
+- forms use now post method
+- adde web sockets support for instant reload
+
+#### v0.3.5 ####
+- major refactoring using webapputils-ds now
+
+#### v0.3.4 ####
+- added delete item
 
 ## License Code ##
 

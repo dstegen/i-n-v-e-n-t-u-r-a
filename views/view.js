@@ -59,7 +59,7 @@ function view (obj, wsport, lang='en') {
             ${obj.map(makeRow).join('')}
           </table>
           <div id="tableFooter" class="d-flex justify-content-between mt-3">
-            <span class="align-self-center">${fs.statSync('./inventura_catalog.csv')['mtime'].toString().substring(0,21)}</span>
+            <span class="align-self-center">${locale.lastUpdated[lang]} ${fs.statSync('./inventura_catalog.csv')['mtime'].toString().substring(0,21)}</span>
             <!-- Button trigger modal -->
             <button type="button" class="btn-sm btn-primary align-self-center" data-toggle="modal" data-target="#addModal">
               ${locale.additem[lang]}

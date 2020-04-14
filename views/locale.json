@@ -66,5 +66,9 @@
   "deleteItem": {
     "en": "delete",
     "de": "löschen"
+  },
+  "lastUpdated": {
+    "en": "last update: ",
+    "de": "Letzte Aktualisierung: "
   }
 }

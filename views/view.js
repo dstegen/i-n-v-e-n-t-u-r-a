@@ -182,7 +182,7 @@ function makeRow (item) {
   if (item.valid_until < now) rowColor = 'bg-danger';
   if (item.amount < 1) rowColor = 'bg-out';
   let returnRow = `<tr id="${item.id}" class="${item.category} ${rowColor} ${item.tags.split(',').join(' ')}">`;
-  Object.keys(item).forEach((key, i) => {
+  Object.keys(item).forEach(key => {
     returnRow += `
       <td class="entries id${item.id} ${key}">${item[key]}</td>
     `;

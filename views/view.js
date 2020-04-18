@@ -13,7 +13,10 @@ const {SendObj} = require('webapputils-ds');
 const locale = require('./locale.json');
 
 
-function view (obj, wsport, lang='en') {
+function view (obj, wsport, lang) {
+  lang = lang.split('-')[0];
+  console.log(lang);
+  if (lang != 'de') lang = 'en';
   let categories = Array.from(new Set(obj.filter( item => item.category !== '').map( item => { return item.category})));
   let tags = Array.from(new Set(obj.filter( item => item.tags !== '').map( item => { return item.tags}).toString().split(',')));
   let sendObj = new SendObj();
@@ -147,7 +150,7 @@ function view (obj, wsport, lang='en') {
         </footer>
         <script src="/node_modules/jquery/dist/jquery.min.js"></script>
         <script src="/node_modules/tokenfield/dist/tokenfield.min.js"></script>
-        <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="/public/cookie.js"></script>
         <script>
           let categories = [${categories.map(item => {return '"'+item+'"'})}];

@@ -8,31 +8,12 @@
 'use strict';
 
 // Required Modules
-const http = require('http');
-const WebSocket = require('ws');
-const {getIPs} = require('webapputils-ds');
+const {ServerDS} = require('webapputils-ds');
 const router = require('./lib/router');
 
-let port = 8080;
-let wsport = 8080;
-let host = 'localhost';
-if (getIPs()['en0']) {
-  host = getIPs()['en0'];
-} else if (getIPs()['wlo1']) {
-  host = getIPs()['wlo1'];
-} else if (getIPs()['eth0']) {
-  host = getIPs()['eth0'];
-  port = 80;
-  wsport = 80;
-}
-console.log('Available network devices: ');
-console.log(getIPs());
+// Name the process
+process.title = 'i-n-v-e-n-t-u-r-a';
 
-const server = http.createServer( function (request, response) {
-  router(request, response, wss, wsport);
-}).listen(port, host, () => console.log('i-n-v-e-n-t-u-r-a is online: http://'+host+':'+port+' (wsport:'+wsport+')'));
-
-const wss = new WebSocket.Server({
-  server,
-  clientTracking: true
-});
+const server = new ServerDS('i-n-v-e-n-t-u-r-a');
+server.setCallback(router);
+server.startServer();

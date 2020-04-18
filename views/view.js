@@ -15,7 +15,6 @@ const locale = require('./locale.json');
 
 function view (obj, wsport, lang) {
   lang = lang.split('-')[0];
-  console.log(lang);
   if (lang != 'de') lang = 'en';
   let categories = Array.from(new Set(obj.filter( item => item.category !== '').map( item => { return item.category})));
   let tags = Array.from(new Set(obj.filter( item => item.tags !== '').map( item => { return item.tags}).toString().split(',')));

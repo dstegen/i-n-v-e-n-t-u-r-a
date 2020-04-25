@@ -109,8 +109,9 @@ for (let i=0; i<colums; i++) {
   directionList.push('asc');
 };
 
-function sortTable(column) {
-  let direction = directionList[column];
+function sortTable(column, direction = directionList[column]) {
+  Cookies.set('lastSortedColumn', column);
+  Cookies.set('lastSortOrder', directionList[column]);
   if (direction === 'asc') {
     directionList[column] = 'des';
   } else {
@@ -144,6 +145,8 @@ function sortTable(column) {
     }
   }
 }
+
+sortTable(Cookies.get('lastSortedColumn'), Cookies.get('lastSortOrder'))
 
 // tokenfield
 

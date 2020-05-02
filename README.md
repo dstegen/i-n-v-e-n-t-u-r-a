@@ -1,5 +1,5 @@
 # i-n-v-e-n-t-u-r-a #
-#### simple home stock inventory server-app in nodejs ####
+#### simple home stock inventory server-app written in nodejs ####
 
 ## Installation ##
 

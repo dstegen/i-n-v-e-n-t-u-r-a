@@ -6,6 +6,25 @@
  */
 
 
+ // tokenfield
+
+ const tf = new Tokenfield({
+   el: document.querySelector('#tags'), // Attach Tokenfield to the input element with class "text-input"
+   items: myTags,
+   delimiters: [','],
+   itemName: "tags",
+   newItemName: "tags"
+ });
+
+ const tf2 = new Tokenfield({
+   el: document.querySelector('#add_tags'), // Attach Tokenfield to the input element with class "text-input"
+   items: myTags,
+   delimiters: [','],
+   itemName: "tags",
+   newItemName: "tags"
+ });
+ 
+
 // editing items
 
 let editObj = {};
@@ -148,23 +167,6 @@ function sortTable(column, direction = directionList[column]) {
 
 sortTable(Cookies.get('lastSortedColumn'), Cookies.get('lastSortOrder'))
 
-// tokenfield
-
-const tf = new Tokenfield({
-  el: document.querySelector('#tags'), // Attach Tokenfield to the input element with class "text-input"
-  items: myTags,
-  delimiters: [','],
-  itemName: "tags",
-  newItemName: "tags"
-});
-
-const tf2 = new Tokenfield({
-  el: document.querySelector('#add_tags'), // Attach Tokenfield to the input element with class "text-input"
-  items: myTags,
-  delimiters: [','],
-  itemName: "tags",
-  newItemName: "tags"
-});
 
 // Resize Table Footer
 

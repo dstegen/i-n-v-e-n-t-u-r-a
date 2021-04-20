@@ -19,7 +19,7 @@
   "dependencies": {
     "csvjson": "^5.1.0",
     "tokenfield": "^1.2.2",
-    "webapputils-ds": "^0.4.7"
+    "webapputils-ds": "^0.5.0"
   },
   "repository": {
     "type": "git",
